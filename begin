@@ -13,4 +13,20 @@ $ docker exec -it mysql1 bash
 // "#" pops up. If it doesn't work, enter "$ docker start mysql1" and reenter the command line.
 
 enter MySQL
-# mysql -uroot -p 
+# mysql -uroot -p
+지정한 비밀번호 입력하서 들어갔다면 성공
+
+use Launchpad as test-db
+
+# apt update 
+# apt install wget bzip2 nano
+# wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2
+파일 주소를 그대로 적어서 내려 받기
+# bzip2 -d employees_db-full-1.0.6.tar.bz2
+# tar xvfz employees_db-full-1.0.6.tar
+압축 풀기
+# cd employees_db
+employees_db 폴더로 이동
+# ls
+폴더에 있는 파일 목록으로 보기
+
