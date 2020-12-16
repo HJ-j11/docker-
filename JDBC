@@ -11,3 +11,9 @@ $ docker exec -it ubuntu1 bash
 # service tomcat8 start
 
 http://192.168.99.100:8080 혹은 localhost 에 접속했을 때 tomcat 화면이 뜨면 성공
+
+/var/lib/tomcat8/webapps/ROOT/에 sample.jsp 만들기
+
+# nano /var/lib/tomcat8/webapps/ROOT/sample.jsp
+
+http://192.168.99.100:8080/sample.jsp 에 접속하여 결과 나오면 성공
