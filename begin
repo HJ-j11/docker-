@@ -16,6 +16,14 @@ enter MySQL
 # mysql -uroot -p
 지정한 비밀번호 입력하서 들어갔다면 성공
 
+OR use ubuntu container instead 
+(JDBC를 활용하려고 했을 때, mysql:5.7에서는 openjdk-11 apt이 존재하지 않았고, tomcat8도 깔리지 않았음.)
+
+$ docker run -d -it -p 8080:8080 --name ubuntu1 ubuntu
+virtual box에서 포트를 8080으로 지정.
+
+
+
 use Launchpad as test-db
 
 # apt update 
