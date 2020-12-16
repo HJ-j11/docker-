@@ -5,7 +5,7 @@ $ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=XXXX --name=mysql1 mysql:5.7
 // --name=XX means that you can name the container 
 images mysql:5.7 will be downloaded automatically
 
-to see all containers 
+To see all containers 
 $ docker ps -a
 
 start container mysql:5.7
