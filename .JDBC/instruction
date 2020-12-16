@@ -1,0 +1,19 @@
+with ubuntu container 
+
+$ docker exec -it ubuntu1 bash
+# apt update
+# apt install openjdk-11
+# apt install libmysql-java
+# apt install tomcat8
+# cd/usr/share/java
+# ln -s /usr/share/java/mysql-connector-java.jar /usr/share/tomcat8/lib
+// connectoer를 tomcat8/lib 폴더에 옮김.
+# service tomcat8 start
+
+http://192.168.99.100:8080 혹은 localhost 에 접속했을 때 tomcat 화면이 뜨면 성공
+
+/var/lib/tomcat8/webapps/ROOT/에 sample.jsp 만들기
+
+# nano /var/lib/tomcat8/webapps/ROOT/sample.jsp
+
+http://192.168.99.100:8080/sample.jsp 에 접속하여 결과 나오면 성공
