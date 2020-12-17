@@ -1,5 +1,10 @@
-with ubuntu container 
+window 10에서 사용하는 docker toolbox는 linux debian 버전과 다르기에 libmysql-java, tomcat8 존재하지 않음.
 
+따라서 ubuntu:18.04 container 로 시작.
+$ docker run -d -it -p 8080:8080 --name ubuntu1 ubuntu:18.04
+
+
+with ubuntu container 
 $ docker exec -it ubuntu1 bash
 # apt update
 # apt install openjdk-11
