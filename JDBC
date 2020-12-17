@@ -3,7 +3,7 @@ with ubuntu container
 $ docker exec -it ubuntu1 bash
 # apt update
 # apt install openjdk-11
-# apt install libmysql-java
+# apt install libmysql-java (없다면 mysql-server)
 # apt install tomcat8
 # cd/usr/share/java
 # ln -s /usr/share/java/mysql-connector-java.jar /usr/share/tomcat8/lib
