@@ -1,6 +1,6 @@
 window 10에서 사용하는 docker toolbox는 linux debian 버전과 다르기에 libmysql-java, tomcat8 존재하지 않음.
 
-따라서 ubuntu:18.04 container 로 시작. (ubuntu 버전에 따라 필요한 apt이 없을 수도 있음을 유의)
+따라서 ubuntu:18.04 container 로 시작. (ubuntu 버전에 따라 필요한 apt이 없을 수도 있음을 유의. 이러한 경우 wget으로 주소 그대로 설치하는 방법도 있음.)
 $ docker run -d -it -p 8080:8080 --name ubuntu1 ubuntu:18.04
 
 
