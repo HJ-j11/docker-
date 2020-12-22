@@ -36,5 +36,7 @@ use Launchpad as test-db
 # cd employees_db
 employees_db 폴더로 이동
 # ls
-폴더에 있는 파일 목록으로 보기
+폴더에 있는 파일 목록으로 보기 ( employees.sql 있다면 정상적으로 압축이 풀린 것)
 
+# mysql -uroot -p 접속(접속되지 않는다면 .JDBC 폴더에 있는 INSTRUCTION 참고)
+mysql > source employees.sql 하여 쿼리 풀기
