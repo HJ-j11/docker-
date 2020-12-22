@@ -7,6 +7,14 @@ $ docker exec -it ubuntu1 bash
 # apt install tomcat8
 # cd/usr/share/java
 # ln -s /usr/share/java/mysql-connector-java.jar /usr/share/tomcat8/lib
+
+# mysql -uroot -p 
+Mysql -uroot -p 접속이 안된다면, /etc/init.d/mysql start 로 mysql 실행해보기 
+# mysql -uroot -p로 접속해서 
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+: localhost 비밀번호 설정.
+# service mysql restart
+
 // connectoer를 tomcat8/lib 폴더에 옮김.
 # service tomcat8 start
 
