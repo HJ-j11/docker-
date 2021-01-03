@@ -1,3 +1,47 @@
 Full text search with N-gram, Mecab using NoSQL
 ----
 
+전문검색 인덱스 실습
+ 
+ 
+ 
+ 
+ 
+
+
+- 역인덱스 내용 확인하기
+ 
+ 
+ 
+
+- N-GRAM 토크나이저 기반 전문검색 인덱스
+ 
+ 
+
+- Stopword 테이블 생성 
+ 
+
+MECAB 설치 후 ‘아버지가 방에 들어가신다’ 예제
+ 
+
+MYSQL 컨테이너에서 테이블 추가
+ 
+ 
+
+
+
+이후 docker toolbox에서 한글 입력이 되지 않아, docker for windows를 설치하여 windows powershell로 실행하였습니다. 컨테이너를 run한 명령어는 다음과 같다.
+Docker run -d -p -e MYSQL_ROOT_PASSWORD=mju -e LC_ALL=C.UTF-8 –-name=mysql2 mysql:5.7
+
+데이터는 다음과 같이 INSERT 하였다.
+ 
+ 
+ 
+ 
+STOPWORD로 테이블을 생성하고 이렇게 실행한 결과 
+SELECT * FROM M_GISATXT_3M WHERE MATCH(M_TXT) AGAINST (‘서울’ IN NATURAL LANGUAGE MODE)를 실행했을 때, 동일한 쿼리임에도 결과는 다르게 나왔음.
+ 
+ 
+ 
+
+이는 이전과 다르게 INFORMATION_SCHEMA의 INDEX_TABLE이 아래와 같이 구성되어 있음을 통해서 결과를 유추할 수 있다. 
