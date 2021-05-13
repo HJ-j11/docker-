@@ -2,6 +2,9 @@ with ubuntu container
 
 $ docker exec -it ubuntu1 bash
 # apt update
+
+# apt install mysql-server
+
 # apt install openjdk-11
 # apt install libmysql-java
 # apt install tomcat8
